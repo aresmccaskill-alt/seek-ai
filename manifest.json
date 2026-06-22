@@ -2,8 +2,8 @@
   "name": "Seek AI",
   "short_name": "Seek AI",
   "description": "Voice-controlled AI assistant — tap to activate. Commands, chat, and drawing powered by AI.",
-  "start_url": "/?launched=1",
-  "scope": "/",
+  "start_url": "https://aresmccaskill-alt.github.io/seek-ai/?launched=1",
+  "scope": "https://aresmccaskill-alt.github.io/seek-ai/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "theme_color": "#020d1a",
@@ -11,13 +11,13 @@
   "categories": ["productivity", "utilities"],
   "screenshots": [
     {
-      "src": "/icon-192.png",
+      "src": "https://aresmccaskill-alt.github.io/seek-ai/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "form_factor": "narrow"
     },
     {
-      "src": "/icon-512.png",
+      "src": "https://aresmccaskill-alt.github.io/seek-ai/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "form_factor": "wide"
@@ -25,37 +25,37 @@
   ],
   "icons": [
     {
-      "src": "/seek-eye.svg",
+      "src": "https://aresmccaskill-alt.github.io/seek-ai/seek-eye.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "/icon-192.png",
+      "src": "https://aresmccaskill-alt.github.io/seek-ai/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-512.png",
+      "src": "https://aresmccaskill-alt.github.io/seek-ai/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/apple-touch-icon.png",
+      "src": "https://aresmccaskill-alt.github.io/seek-ai/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-192-maskable.png",
+      "src": "https://aresmccaskill-alt.github.io/seek-ai/icon-192-maskable.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/icon-512-maskable.png",
+      "src": "https://aresmccaskill-alt.github.io/seek-ai/icon-512-maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -66,10 +66,10 @@
       "name": "Start Listening",
       "short_name": "Listen",
       "description": "Open Seek AI and start listening",
-      "url": "/?action=listen",
+      "url": "https://aresmccaskill-alt.github.io/seek-ai/?action=listen",
       "icons": [
         {
-          "src": "/icon-192.png",
+          "src": "https://aresmccaskill-alt.github.io/seek-ai/icon-192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
@@ -77,7 +77,7 @@
     }
   ],
   "share_target": {
-    "action": "/share",
+    "action": "https://aresmccaskill-alt.github.io/seek-ai/share",
     "method": "POST",
     "enctype": "multipart/form-data",
     "params": {
