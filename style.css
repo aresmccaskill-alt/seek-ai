@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #eee;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #00ccff;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #00ccff;
+    text-shadow: 0 0 10px #00ccff;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Video Section */
+.video-section {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+    background: #000;
+    border: 2px solid #00ccff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+}
+
+#cameraFeed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detection-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.detection-info {
+    background: rgba(0, 204, 255, 0.7);
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    width: fit-content;
+    font-family: monospace;
+}
+
+.face-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(255, 100, 100, 0.8);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+/* Eye Section */
+.eye-section {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.eye {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 15px rgba(0, 204, 255, 0.5));
+    transition: transform 0.1s ease-out;
+}
+
+.eye:hover {
+    transform: scale(1.05);
+}
+
+.eye:active {
+    transform: scale(0.95);
+}
+
+.response-box {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #00ccff;
+    border-radius: 10px;
+    padding: 15px 25px;
+    min-width: 250px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.2);
+}
+
+#responseText {
+    font-size: 1em;
+    color: #00ccff;
+    font-family: monospace;
+    margin: 0;
+    min-height: 20px;
+}
+
+/* Controls Section */
+.controls-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: 2px solid #00ccff;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: monospace;
+}
+
+.btn-primary {
+    background: #00ccff;
+    color: #000;
+}
+
+.btn-primary:hover {
+    background: #00ffff;
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.6);
+    transform: scale(1.05);
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #00ccff;
+}
+
+.btn-secondary:hover {
+    background: rgba(0, 204, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.4);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.status-box {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00ccff;
+    border-radius: 8px;
+    padding: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.status-box h3 {
+    color: #00ccff;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.status-log {
+    font-size: 0.85em;
+    font-family: monospace;
+    max-height: 150px;
+    overflow-y: auto;
+    color: #aaa;
+}
+
+.status-log p {
+    margin: 5px 0;
+    color: #00ccff;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .eye {
+        width: 150px;
+        height: 150px;
+    }
+
+    .video-section {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        height: auto;
+    }
+
+    .header {
+        padding: 15px;
+    }
+
+    .main-content {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .eye {
+        width: 120px;
+        height: 120px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.85em;
+    }
+}
